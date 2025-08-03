@@ -1,12 +1,18 @@
-class Solution {
-    public int removeElement(int[] nums, int val) {
-        int k=0;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i] != val){
-                nums[k]= nums[i];
-                k++;
-            }
-        }
-        return k;
-    }
-}
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+var createCounter = function(n) {
+    
+    return function() {
+       return n++
+       
+    };
+};
+
+/** 
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
+ */
